@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class LIST
+class LIST_DEL
 {
     struct node
     {
@@ -15,7 +15,7 @@ class LIST
     int n;
 
 public:
-    LIST()
+    LIST_DEL()
     {
         start = NULL;
         n = 0;
@@ -26,7 +26,7 @@ public:
     void display();
 };
 
-void LIST::create()
+void LIST_DEL::create()
 {
     cout << "Enter the number of nodes to create: ";
     cin >> n;
@@ -55,7 +55,7 @@ void LIST::create()
 }
 
 
-void LIST::remove()
+void LIST_DEL::remove()
 {
     int p;
     cout << "\nEnter position to delete: ";
@@ -90,7 +90,7 @@ void LIST::remove()
 }
 
 
-void LIST::display()
+void LIST_DEL::display()
 {
     node *curr = start;
     if (curr == NULL)
@@ -111,7 +111,7 @@ void LIST::display()
 
 int main()
 {
-    LIST L;
+    LIST_DEL L;
     L.create();
     L.display();
     L.remove();
